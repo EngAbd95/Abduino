@@ -1,0 +1,17 @@
+boolean x1=0,x2=0,f=1;
+void setup()
+{	
+	pinMode(9,1);
+	pinMode(3,0);
+}
+void loop()
+{
+	x1=digitalRead(3);
+	if(x1!=x2)
+	{
+		x2=x1;
+		if(x1==0)
+			f=f^1;
+		digitalWrite(9,f);
+	}
+}
